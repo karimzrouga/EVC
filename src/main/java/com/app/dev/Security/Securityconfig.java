@@ -18,7 +18,7 @@ public class Securityconfig extends WebSecurityConfigurerAdapter {
 
 		http.csrf().disable()// disable cookies
 				.authorizeRequests().antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-				.antMatchers( "/api/**all" ).permitAll()
+				.antMatchers( "/api/**" ).permitAll()
 				.antMatchers( "/api/imageupload" ).permitAll()
 				.anyRequest().authenticated()
 				.and().formLogin().loginPage("/api/auth").permitAll()
