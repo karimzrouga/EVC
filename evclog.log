@@ -1,0 +1,506 @@
+2022-01-27 19:34:02.201  INFO 1808 --- [restartedMain] com.app.dev.EvcApplication               : Starting EvcApplication using Java 11.0.10 on DESKTOP-2B5SJGD with PID 1808 (C:\Users\karim\Desktop\evc\New folder\evc\target\classes started by karim in C:\Users\karim\Desktop\evc\New folder\evc)
+2022-01-27 19:34:02.224  INFO 1808 --- [restartedMain] com.app.dev.EvcApplication               : No active profile set, falling back to default profiles: default
+2022-01-27 19:34:02.467  INFO 1808 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-27 19:34:02.469  INFO 1808 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-27 19:34:04.325  INFO 1808 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-27 19:34:04.453  INFO 1808 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 6 JPA repository interfaces.
+2022-01-27 19:34:05.887  INFO 1808 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-27 19:34:05.902  INFO 1808 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-27 19:34:05.903  INFO 1808 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-01-27 19:34:06.121  INFO 1808 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-27 19:34:06.122  INFO 1808 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3636 ms
+2022-01-27 19:34:07.209  INFO 1808 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-27 19:34:11.711  INFO 1808 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-27 19:34:40.221  WARN 1808 --- [restartedMain] com.zaxxer.hikari.pool.ProxyConnection   : HikariPool-1 - Connection org.postgresql.jdbc.PgConnection@355a5b4b marked as broken because of SQLSTATE(0A000), ErrorCode(0)
+
+java.sql.SQLFeatureNotSupportedException: Method org.postgresql.jdbc.PgConnection.createClob() is not yet implemented.
+	at org.postgresql.Driver.notImplemented(Driver.java:699) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.jdbc.PgConnection.createClob(PgConnection.java:1341) ~[postgresql-42.2.23.jar:42.2.23]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.createClob(HikariProxyConnection.java) ~[HikariCP-4.0.3.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation(LobCreatorBuilderImpl.java:121) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl.makeLobCreatorBuilder(LobCreatorBuilderImpl.java:56) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentImpl.<init>(JdbcEnvironmentImpl.java:282) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:114) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar:2.5.3]
+	at com.app.dev.EvcApplication.main(EvcApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.3.jar:2.5.3]
+
+2022-01-27 19:34:42.329 DEBUG 1808 --- [restartedMain] org.hibernate.SQL                        : create table hibernate_sequence (next_val bigint) engine=MyISAM
+2022-01-27 19:34:42.474 DEBUG 1808 --- [restartedMain] org.hibernate.SQL                        : insert into hibernate_sequence values ( 1 )
+2022-01-27 19:34:42.618 DEBUG 1808 --- [restartedMain] org.hibernate.SQL                        : create table medactualite (idactualite integer not null, data date, description varchar(255), titre varchar(255), primary key (idactualite)) engine=MyISAM
+2022-01-27 19:34:42.773 DEBUG 1808 --- [restartedMain] org.hibernate.SQL                        : create table medcandidat (idcandidat integer not null, datemessage date, email varchar(255), facebook varchar(255), linkedin varchar(255), nom varchar(255), pays varchar(255), prenom varchar(255), remarque varchar(255), specialite varchar(255), primary key (idcandidat)) engine=MyISAM
+2022-01-27 19:34:42.923 DEBUG 1808 --- [restartedMain] org.hibernate.SQL                        : create table medformation (idformation integer not null, description varchar(255), image varchar(255), titre varchar(255), primary key (idformation)) engine=MyISAM
+2022-01-27 19:34:43.082 DEBUG 1808 --- [restartedMain] org.hibernate.SQL                        : create table medoffre (idoffre integer not null, data date, description varchar(255), image varchar(255), titre varchar(255), primary key (idoffre)) engine=MyISAM
+2022-01-27 19:34:43.260 DEBUG 1808 --- [restartedMain] org.hibernate.SQL                        : create table medspecialite (idspecialite integer not null, description varchar(255), libelle varchar(255), primary key (idspecialite)) engine=MyISAM
+2022-01-27 19:34:43.421 DEBUG 1808 --- [restartedMain] org.hibernate.SQL                        : create table medspecialitesupport (idformation integer not null, idspecialite integer not null) engine=MyISAM
+2022-01-27 19:34:43.592 DEBUG 1808 --- [restartedMain] org.hibernate.SQL                        : create table user (id integer not null, full_name varchar(255), email varchar(255), image varchar(255), password varchar(255), username varchar(255), primary key (id)) engine=MyISAM
+2022-01-27 19:34:43.758 DEBUG 1808 --- [restartedMain] org.hibernate.SQL                        : alter table medspecialitesupport add constraint FK51od0os2cdj5yjb0tjtasjx8y foreign key (idspecialite) references medspecialite (idspecialite)
+2022-01-27 19:34:43.904 DEBUG 1808 --- [restartedMain] org.hibernate.SQL                        : alter table medspecialitesupport add constraint FK4rrcu4633iosjrvevshep4nh foreign key (idformation) references medformation (idformation)
+2022-01-27 19:34:44.073  INFO 1808 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-27 19:34:45.367  WARN 1808 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-27 19:34:46.706  INFO 1808 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@574b0479, org.springframework.security.web.context.SecurityContextPersistenceFilter@ce880c0, org.springframework.security.web.header.HeaderWriterFilter@3875b15c, org.springframework.security.web.authentication.logout.LogoutFilter@4f595049, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@33d96af0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@a9aa843, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fd4069f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45799d7b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@17c24421, org.springframework.security.web.session.SessionManagementFilter@76c7368f, org.springframework.security.web.access.ExceptionTranslationFilter@3728ac2f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e4c63d4]
+2022-01-27 19:34:47.277 DEBUG 1808 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-01-27 19:34:47.443 DEBUG 1808 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 37 mappings in 'requestMappingHandlerMapping'
+2022-01-27 19:34:47.546 DEBUG 1808 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-01-27 19:34:47.585 DEBUG 1808 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-01-27 19:34:48.418  INFO 1808 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-27 19:34:48.519  INFO 1808 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-27 19:34:48.546  INFO 1808 --- [restartedMain] com.app.dev.EvcApplication               : Started EvcApplication in 47.585 seconds (JVM running for 50.463)
+2022-01-27 19:34:48.943 DEBUG 1808 --- [restartedMain] org.hibernate.SQL                        : select appuser0_.id as id1_6_, appuser0_.full_name as full_nam2_6_, appuser0_.email as email3_6_, appuser0_.image as image4_6_, appuser0_.password as password5_6_, appuser0_.username as username6_6_ from user appuser0_
+2022-01-27 19:34:49.092 ERROR 1808 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: column appuser0_.id does not exist
+  Position: 8
+2022-01-27 19:34:49.258  INFO 1808 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-27 19:34:49.293 ERROR 1808 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:794) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:775) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:345) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar:2.5.3]
+	at com.app.dev.EvcApplication.main(EvcApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.3.jar:2.5.3]
+Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:259) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:551) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.5.3.jar:2.5.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.9.jar:5.3.9]
+	at com.sun.proxy.$Proxy107.findAll(Unknown Source) ~[na:na]
+	at com.app.dev.SERVICES.UserService.findAll(UserService.java:45) ~[classes/:na]
+	at com.app.dev.Security.Initializer.run(Initializer.java:23) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:791) ~[spring-boot-2.5.3.jar:2.5.3]
+	... 10 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:103) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:67) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2297) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2050) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2012) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.doQuery(Loader.java:948) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:349) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2843) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2825) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2657) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.list(Loader.java:2652) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:506) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1414) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1636) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1604) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.Query.getResultList(Query.java:165) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getResultList(CriteriaQueryTypeQueryAdapter.java:76) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:396) ~[spring-data-jpa-2.5.3.jar:2.5.3]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:81) ~[spring-data-jpa-2.5.3.jar:2.5.3]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:599) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.9.jar:5.3.9]
+	... 20 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: column appuser0_.id does not exist
+  Position: 8
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114) ~[postgresql-42.2.23.jar:42.2.23]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	... 58 common frames omitted
+
+2022-01-27 19:34:49.923  INFO 1808 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-27 19:34:49.928  INFO 1808 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-27 19:34:51.433  INFO 1808 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-27 19:35:44.647  INFO 12936 --- [restartedMain] com.app.dev.EvcApplication               : Starting EvcApplication using Java 11.0.10 on DESKTOP-2B5SJGD with PID 12936 (C:\Users\karim\Desktop\evc\New folder\evc\target\classes started by karim in C:\Users\karim\Desktop\evc\New folder\evc)
+2022-01-27 19:35:44.651  INFO 12936 --- [restartedMain] com.app.dev.EvcApplication               : No active profile set, falling back to default profiles: default
+2022-01-27 19:35:44.735  INFO 12936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-27 19:35:44.736  INFO 12936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-27 19:35:46.160  INFO 12936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-27 19:35:46.293  INFO 12936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 6 JPA repository interfaces.
+2022-01-27 19:35:47.569  INFO 12936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-27 19:35:47.593  INFO 12936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-27 19:35:47.595  INFO 12936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-01-27 19:35:47.795  INFO 12936 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-27 19:35:47.796  INFO 12936 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3059 ms
+2022-01-27 19:35:48.777  INFO 12936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-27 19:35:52.246  INFO 12936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-27 19:36:37.523 DEBUG 12936 --- [restartedMain] org.hibernate.SQL                        : create table hibernate_sequence (next_val bigint) engine=MyISAM
+2022-01-27 19:36:37.821 DEBUG 12936 --- [restartedMain] org.hibernate.SQL                        : insert into hibernate_sequence values ( 1 )
+2022-01-27 19:36:38.283 DEBUG 12936 --- [restartedMain] org.hibernate.SQL                        : create table medactualite (idactualite integer not null, data date, description varchar(255), titre varchar(255), primary key (idactualite)) engine=MyISAM
+2022-01-27 19:36:38.656 DEBUG 12936 --- [restartedMain] org.hibernate.SQL                        : create table medcandidat (idcandidat integer not null, datemessage date, email varchar(255), facebook varchar(255), linkedin varchar(255), nom varchar(255), pays varchar(255), prenom varchar(255), remarque varchar(255), specialite varchar(255), primary key (idcandidat)) engine=MyISAM
+2022-01-27 19:36:39.014 DEBUG 12936 --- [restartedMain] org.hibernate.SQL                        : create table medformation (idformation integer not null, description varchar(255), image varchar(255), titre varchar(255), primary key (idformation)) engine=MyISAM
+2022-01-27 19:36:39.163 DEBUG 12936 --- [restartedMain] org.hibernate.SQL                        : create table medoffre (idoffre integer not null, data date, description varchar(255), image varchar(255), titre varchar(255), primary key (idoffre)) engine=MyISAM
+2022-01-27 19:36:39.308 DEBUG 12936 --- [restartedMain] org.hibernate.SQL                        : create table medspecialite (idspecialite integer not null, description varchar(255), libelle varchar(255), primary key (idspecialite)) engine=MyISAM
+2022-01-27 19:36:39.461 DEBUG 12936 --- [restartedMain] org.hibernate.SQL                        : create table medspecialitesupport (idformation integer not null, idspecialite integer not null) engine=MyISAM
+2022-01-27 19:36:39.689 DEBUG 12936 --- [restartedMain] org.hibernate.SQL                        : create table user (id integer not null, full_name varchar(255), email varchar(255), image varchar(255), password varchar(255), username varchar(255), primary key (id)) engine=MyISAM
+2022-01-27 19:36:40.060 DEBUG 12936 --- [restartedMain] org.hibernate.SQL                        : alter table medspecialitesupport add constraint FK51od0os2cdj5yjb0tjtasjx8y foreign key (idspecialite) references medspecialite (idspecialite)
+2022-01-27 19:36:41.157 DEBUG 12936 --- [restartedMain] org.hibernate.SQL                        : alter table medspecialitesupport add constraint FK4rrcu4633iosjrvevshep4nh foreign key (idformation) references medformation (idformation)
+2022-01-27 19:36:41.327  INFO 12936 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-27 19:36:42.146  WARN 12936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-27 19:36:42.750  INFO 12936 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a36b16d, org.springframework.security.web.context.SecurityContextPersistenceFilter@2a3ca21c, org.springframework.security.web.header.HeaderWriterFilter@309946c9, org.springframework.security.web.authentication.logout.LogoutFilter@247e2237, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7569e08, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4c12860a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ebb9b42, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@30fef4eb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b8708cc, org.springframework.security.web.session.SessionManagementFilter@4d840bf, org.springframework.security.web.access.ExceptionTranslationFilter@745615ec, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@738a2516]
+2022-01-27 19:36:43.302 DEBUG 12936 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-01-27 19:36:43.534 DEBUG 12936 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 37 mappings in 'requestMappingHandlerMapping'
+2022-01-27 19:36:43.644 DEBUG 12936 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-01-27 19:36:43.671 DEBUG 12936 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-01-27 19:36:44.211  INFO 12936 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-27 19:36:44.268  INFO 12936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-27 19:36:44.285  INFO 12936 --- [restartedMain] com.app.dev.EvcApplication               : Started EvcApplication in 60.49 seconds (JVM running for 62.637)
+2022-01-27 19:36:45.003 DEBUG 12936 --- [restartedMain] org.hibernate.SQL                        : select appuser0_.id as id1_6_, appuser0_.full_name as full_nam2_6_, appuser0_.email as email3_6_, appuser0_.image as image4_6_, appuser0_.password as password5_6_, appuser0_.username as username6_6_ from user appuser0_
+2022-01-27 19:36:45.309 ERROR 12936 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: column appuser0_.id does not exist
+  Position: 8
+2022-01-27 19:36:45.608  INFO 12936 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-27 19:36:45.654 ERROR 12936 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:794) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:775) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:345) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar:2.5.3]
+	at com.app.dev.EvcApplication.main(EvcApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.3.jar:2.5.3]
+Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:259) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:551) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.5.3.jar:2.5.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.9.jar:5.3.9]
+	at com.sun.proxy.$Proxy107.findAll(Unknown Source) ~[na:na]
+	at com.app.dev.SERVICES.UserService.findAll(UserService.java:45) ~[classes/:na]
+	at com.app.dev.Security.Initializer.run(Initializer.java:23) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:791) ~[spring-boot-2.5.3.jar:2.5.3]
+	... 10 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:103) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:67) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2297) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2050) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2012) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.doQuery(Loader.java:948) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:349) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2843) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2825) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2657) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.list(Loader.java:2652) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:506) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1414) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1636) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1604) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.Query.getResultList(Query.java:165) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getResultList(CriteriaQueryTypeQueryAdapter.java:76) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:396) ~[spring-data-jpa-2.5.3.jar:2.5.3]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:599) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.9.jar:5.3.9]
+	... 20 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: column appuser0_.id does not exist
+  Position: 8
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114) ~[postgresql-42.2.23.jar:42.2.23]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	... 57 common frames omitted
+
+2022-01-27 19:36:46.221  INFO 12936 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-27 19:36:46.226  INFO 12936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-27 19:36:49.084  INFO 12936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-27 19:38:13.914  INFO 2908 --- [restartedMain] com.app.dev.EvcApplication               : Starting EvcApplication using Java 11.0.10 on DESKTOP-2B5SJGD with PID 2908 (C:\Users\karim\Desktop\evc\New folder\evc\target\classes started by karim in C:\Users\karim\Desktop\evc\New folder\evc)
+2022-01-27 19:38:13.918  INFO 2908 --- [restartedMain] com.app.dev.EvcApplication               : No active profile set, falling back to default profiles: default
+2022-01-27 19:38:13.997  INFO 2908 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-27 19:38:13.998  INFO 2908 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-27 19:38:15.484  INFO 2908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-27 19:38:15.640  INFO 2908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 140 ms. Found 6 JPA repository interfaces.
+2022-01-27 19:38:17.776  INFO 2908 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-27 19:38:17.796  INFO 2908 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-27 19:38:17.797  INFO 2908 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-01-27 19:38:17.987  INFO 2908 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-27 19:38:17.991  INFO 2908 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3992 ms
+2022-01-27 19:38:19.359  INFO 2908 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-27 19:38:21.422  INFO 2908 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-27 19:39:03.960 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : drop table if exists hibernate_sequence
+2022-01-27 19:39:05.166 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : drop table if exists medactualite
+2022-01-27 19:39:05.322 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : drop table if exists medcandidat
+2022-01-27 19:39:05.496 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : drop table if exists medformation
+2022-01-27 19:39:05.715 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : drop table if exists medoffre
+2022-01-27 19:39:06.002 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : drop table if exists medspecialite
+2022-01-27 19:39:06.463 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : drop table if exists medspecialitesupport
+2022-01-27 19:39:06.838 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : drop table if exists user
+2022-01-27 19:39:07.169 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : create table hibernate_sequence (next_val bigint) engine=MyISAM
+2022-01-27 19:39:07.334 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : insert into hibernate_sequence values ( 1 )
+2022-01-27 19:39:07.531 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : create table medactualite (idactualite integer not null, data date, description varchar(255), titre varchar(255), primary key (idactualite)) engine=MyISAM
+2022-01-27 19:39:07.792 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : create table medcandidat (idcandidat integer not null, datemessage date, email varchar(255), facebook varchar(255), linkedin varchar(255), nom varchar(255), pays varchar(255), prenom varchar(255), remarque varchar(255), specialite varchar(255), primary key (idcandidat)) engine=MyISAM
+2022-01-27 19:39:08.206 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : create table medformation (idformation integer not null, description varchar(255), image varchar(255), titre varchar(255), primary key (idformation)) engine=MyISAM
+2022-01-27 19:39:08.738 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : create table medoffre (idoffre integer not null, data date, description varchar(255), image varchar(255), titre varchar(255), primary key (idoffre)) engine=MyISAM
+2022-01-27 19:39:09.363 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : create table medspecialite (idspecialite integer not null, description varchar(255), libelle varchar(255), primary key (idspecialite)) engine=MyISAM
+2022-01-27 19:39:10.257 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : create table medspecialitesupport (idformation integer not null, idspecialite integer not null) engine=MyISAM
+2022-01-27 19:39:10.409 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : create table user (id integer not null, full_name varchar(255), email varchar(255), image varchar(255), password varchar(255), username varchar(255), primary key (id)) engine=MyISAM
+2022-01-27 19:39:10.565 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : alter table medspecialitesupport add constraint FK51od0os2cdj5yjb0tjtasjx8y foreign key (idspecialite) references medspecialite (idspecialite)
+2022-01-27 19:39:10.741 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : alter table medspecialitesupport add constraint FK4rrcu4633iosjrvevshep4nh foreign key (idformation) references medformation (idformation)
+2022-01-27 19:39:10.914  INFO 2908 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-27 19:39:11.917  WARN 2908 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-27 19:39:12.523  INFO 2908 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5068e1e, org.springframework.security.web.context.SecurityContextPersistenceFilter@3fba554, org.springframework.security.web.header.HeaderWriterFilter@7ac11a31, org.springframework.security.web.authentication.logout.LogoutFilter@759ce95a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3a3569fb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@462f8fd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fbf2d3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27c44b4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3634e0c, org.springframework.security.web.session.SessionManagementFilter@6bf3fee9, org.springframework.security.web.access.ExceptionTranslationFilter@671ade0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b923e33]
+2022-01-27 19:39:13.068 DEBUG 2908 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-01-27 19:39:13.238 DEBUG 2908 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 37 mappings in 'requestMappingHandlerMapping'
+2022-01-27 19:39:13.357 DEBUG 2908 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-01-27 19:39:13.391 DEBUG 2908 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-01-27 19:39:13.967  INFO 2908 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-27 19:39:14.025  INFO 2908 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-27 19:39:14.044  INFO 2908 --- [restartedMain] com.app.dev.EvcApplication               : Started EvcApplication in 60.805 seconds (JVM running for 63.698)
+2022-01-27 19:39:14.658 DEBUG 2908 --- [restartedMain] org.hibernate.SQL                        : select appuser0_.id as id1_6_, appuser0_.full_name as full_nam2_6_, appuser0_.email as email3_6_, appuser0_.image as image4_6_, appuser0_.password as password5_6_, appuser0_.username as username6_6_ from user appuser0_
+2022-01-27 19:39:15.714 ERROR 2908 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: column appuser0_.id does not exist
+  Position: 8
+2022-01-27 19:39:16.077  INFO 2908 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-27 19:39:16.110 ERROR 2908 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:794) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:775) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:345) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar:2.5.3]
+	at com.app.dev.EvcApplication.main(EvcApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.3.jar:2.5.3]
+Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:259) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:551) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.5.3.jar:2.5.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.9.jar:5.3.9]
+	at com.sun.proxy.$Proxy107.findAll(Unknown Source) ~[na:na]
+	at com.app.dev.SERVICES.UserService.findAll(UserService.java:45) ~[classes/:na]
+	at com.app.dev.Security.Initializer.run(Initializer.java:23) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:791) ~[spring-boot-2.5.3.jar:2.5.3]
+	... 10 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:103) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:67) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2297) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2050) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2012) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.doQuery(Loader.java:948) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:349) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2843) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2825) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2657) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.Loader.list(Loader.java:2652) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:506) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1414) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1636) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1604) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.Query.getResultList(Query.java:165) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getResultList(CriteriaQueryTypeQueryAdapter.java:76) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:396) ~[spring-data-jpa-2.5.3.jar:2.5.3]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:81) ~[spring-data-jpa-2.5.3.jar:2.5.3]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:599) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.5.3.jar:2.5.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.9.jar:5.3.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.9.jar:5.3.9]
+	... 20 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: column appuser0_.id does not exist
+  Position: 8
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164) ~[postgresql-42.2.23.jar:42.2.23]
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114) ~[postgresql-42.2.23.jar:42.2.23]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	... 58 common frames omitted
+
+2022-01-27 19:39:16.660  INFO 2908 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-27 19:39:16.666  INFO 2908 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-27 19:39:20.186  INFO 2908 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-27 19:39:31.437  INFO 8544 --- [restartedMain] com.app.dev.EvcApplication               : Starting EvcApplication using Java 11.0.10 on DESKTOP-2B5SJGD with PID 8544 (C:\Users\karim\Desktop\evc\New folder\evc\target\classes started by karim in C:\Users\karim\Desktop\evc\New folder\evc)
+2022-01-27 19:39:31.445  INFO 8544 --- [restartedMain] com.app.dev.EvcApplication               : No active profile set, falling back to default profiles: default
+2022-01-27 19:39:31.554  INFO 8544 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-27 19:39:31.556  INFO 8544 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-27 19:39:32.934  INFO 8544 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-27 19:39:33.055  INFO 8544 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 6 JPA repository interfaces.
+2022-01-27 19:39:34.249  INFO 8544 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-27 19:39:34.265  INFO 8544 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-27 19:39:34.266  INFO 8544 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-01-27 19:39:34.463  INFO 8544 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-27 19:39:34.464  INFO 8544 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2904 ms
+2022-01-27 19:39:35.320  INFO 8544 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-27 19:39:39.348  INFO 8544 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-27 19:40:22.502 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : drop table if exists hibernate_sequence
+2022-01-27 19:40:23.144 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : drop table if exists medactualite
+2022-01-27 19:40:23.301 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : drop table if exists medcandidat
+2022-01-27 19:40:23.755 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : drop table if exists medformation
+2022-01-27 19:40:24.001 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : drop table if exists medoffre
+2022-01-27 19:40:24.521 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : drop table if exists medspecialite
+2022-01-27 19:40:24.665 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : drop table if exists medspecialitesupport
+2022-01-27 19:40:24.809 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : drop table if exists user
+2022-01-27 19:40:24.960 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : create table hibernate_sequence (next_val bigint) engine=MyISAM
+2022-01-27 19:40:25.104 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : insert into hibernate_sequence values ( 1 )
+2022-01-27 19:40:25.249 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : create table medactualite (idactualite integer not null, data date, description varchar(255), titre varchar(255), primary key (idactualite)) engine=MyISAM
+2022-01-27 19:40:25.395 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : create table medcandidat (idcandidat integer not null, datemessage date, email varchar(255), facebook varchar(255), linkedin varchar(255), nom varchar(255), pays varchar(255), prenom varchar(255), remarque varchar(255), specialite varchar(255), primary key (idcandidat)) engine=MyISAM
+2022-01-27 19:40:25.551 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : create table medformation (idformation integer not null, description varchar(255), image varchar(255), titre varchar(255), primary key (idformation)) engine=MyISAM
+2022-01-27 19:40:25.708 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : create table medoffre (idoffre integer not null, data date, description varchar(255), image varchar(255), titre varchar(255), primary key (idoffre)) engine=MyISAM
+2022-01-27 19:40:26.018 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : create table medspecialite (idspecialite integer not null, description varchar(255), libelle varchar(255), primary key (idspecialite)) engine=MyISAM
+2022-01-27 19:40:26.481 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : create table medspecialitesupport (idformation integer not null, idspecialite integer not null) engine=MyISAM
+2022-01-27 19:40:28.042 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : create table user (id integer not null, full_name varchar(255), email varchar(255), image varchar(255), password varchar(255), username varchar(255), primary key (id)) engine=MyISAM
+2022-01-27 19:40:28.187 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : alter table medspecialitesupport add constraint FK51od0os2cdj5yjb0tjtasjx8y foreign key (idspecialite) references medspecialite (idspecialite)
+2022-01-27 19:40:28.375 DEBUG 8544 --- [restartedMain] org.hibernate.SQL                        : alter table medspecialitesupport add constraint FK4rrcu4633iosjrvevshep4nh foreign key (idformation) references medformation (idformation)
+2022-01-27 19:40:28.540  INFO 8544 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-27 19:40:29.297  WARN 8544 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-27 19:40:29.887  INFO 8544 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@39366d05, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ed50a69, org.springframework.security.web.header.HeaderWriterFilter@30aef63a, org.springframework.security.web.authentication.logout.LogoutFilter@561597d9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@250dbe09, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4b5b4aa1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c34b90f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6acb0b87, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cee3969, org.springframework.security.web.session.SessionManagementFilter@64375768, org.springframework.security.web.access.ExceptionTranslationFilter@5d7c2c9a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@eb83be9]
+2022-01-27 19:40:30.379 DEBUG 8544 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-01-27 19:40:30.543 DEBUG 8544 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 37 mappings in 'requestMappingHandlerMapping'
+2022-01-27 19:40:30.654 DEBUG 8544 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-01-27 19:40:30.691 DEBUG 8544 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-01-27 19:40:31.216  INFO 8544 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-27 19:40:31.271  INFO 8544 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
